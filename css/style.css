@@ -33,6 +33,10 @@ header .container {
     font-weight: bold;
 }
 
+.logo img {
+    height: 40px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
