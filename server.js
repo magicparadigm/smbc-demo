@@ -150,7 +150,7 @@ app.post('/api/create-signing-session', async (req, res) => {
     );
     return res.json({ url, envelopeId });
   } catch (err) {
-    console.error('DocuSign error:', err.message);
+    console.error('DocuSign error:', err.message, JSON.stringify(err.response?.body ?? {}));
 
     if (err.consentUrl) {
       return res.status(403).json({
