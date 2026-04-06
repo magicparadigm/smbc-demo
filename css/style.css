@@ -13,6 +13,15 @@ body {
     padding: 0 20px;
 }
 
+.disclaimer-banner {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 header {
     background-color: #004a34;
     color: white;
