@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signing Complete</title>
+</head>
+<body>
+  <script>
+    // Notify the parent page that the DocuSign session has ended.
+    // DocuSign appends ?event=signing_complete (or decline, cancel, etc.)
+    const params = new URLSearchParams(window.location.search);
+    const event = params.get('event') || 'unknown';
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'docusign-event', event }, '*');
+    }
+  </script>
+</body>
+</html>

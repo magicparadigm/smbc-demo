@@ -1,0 +1,15 @@
+{
+  "name": "smbc-docusign-demo",
+  "version": "1.0.0",
+  "description": "SMBC Group Americas — DocuSign Embedded Signing Demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "docusign-esign": "^6.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

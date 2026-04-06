@@ -1,0 +1,181 @@
+/* ── DocuSign embedded signing demo styles ─────────────────────────────────── */
+
+.hidden { display: none !important; }
+
+/* ── Signing card (form step) ──────────────────────────────────────────────── */
+
+#signing-form {
+  display: flex;
+  justify-content: center;
+}
+
+.signing-card {
+  background: #fff;
+  border: 1px solid #e0e6ef;
+  border-radius: 10px;
+  padding: 40px 48px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 51, 102, 0.08);
+  text-align: center;
+}
+
+.signing-card-icon {
+  font-size: 40px;
+  color: #003366;
+  margin-bottom: 16px;
+}
+
+.signing-card h3 {
+  color: #003366;
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.signing-card > p {
+  color: #666;
+  margin: 0 0 28px;
+  font-size: 15px;
+}
+
+/* ── Form inputs ───────────────────────────────────────────────────────────── */
+
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #c8d4e3;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: #c0392b;
+  font-size: 14px;
+  min-height: 20px;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+/* ── Loading spinner ───────────────────────────────────────────────────────── */
+
+.signing-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 60px 0;
+  color: #003366;
+  font-size: 16px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #e0e6ef;
+  border-top-color: #003366;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── DocuSign iframe ───────────────────────────────────────────────────────── */
+
+#signing-frame-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 51, 102, 0.12);
+}
+
+#ds-frame {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+}
+
+/* ── Post-signing confirmation ─────────────────────────────────────────────── */
+
+.signing-done {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.done-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #003366;
+  color: #ffcc00;
+  font-size: 38px;
+  line-height: 72px;
+  margin: 0 auto 24px;
+}
+
+.signing-done h3 {
+  color: #003366;
+  font-size: 26px;
+  margin: 0 0 12px;
+}
+
+.signing-done p {
+  color: #555;
+  font-size: 16px;
+  margin: 0 0 30px;
+}
+
+.signing-done .btn-primary {
+  width: auto;
+  padding: 14px 36px;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .signing-card {
+    padding: 30px 22px;
+  }
+
+  #ds-frame {
+    height: 500px;
+  }
+}

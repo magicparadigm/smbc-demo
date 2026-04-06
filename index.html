@@ -1,0 +1,137 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMBC Group Americas - Mock Demo Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/docusign-demo.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">SMBC Group</div>
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>A global platform with our custom solutions</h1>
+                <p>Where honor and ingenuity meet. At SMBC Group in the Americas, we combine a Japanese tradition of honor with the spirit of innovation in people and partnerships.</p>
+                <a href="#" class="btn">Learn More About Us</a>
+            </div>
+        </section>
+        <section class="stats">
+            <div class="container">
+                <h2>Connect to our strength and worldwide presence</h2>
+                <div class="stat-grid">
+                    <div class="stat">
+                        <h3>$2.02 trillion</h3>
+                        <p>in total assets</p>
+                    </div>
+                    <div class="stat">
+                        <h3>150+</h3>
+                        <p>offices across 40 countries</p>
+                    </div>
+                    <div class="stat">
+                        <h3>14.59%</h3>
+                        <p>tier one capital ratio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="demo">
+            <div class="container">
+                <h2>Sign a Document — DocuSign Demo</h2>
+                <p>Experience seamless, fully digital document signing powered by DocuSign's eSignature platform.</p>
+
+                <!-- Step 1: sign-up form -->
+                <div id="signing-form">
+                    <div class="signing-card">
+                        <div class="signing-card-icon">&#9998;</div>
+                        <h3>Sign a Sample Agreement</h3>
+                        <p>Enter both signers' details below. Signer 1 will sign here on the page; Signer 2 will receive a signing link by email.</p>
+                        <form id="ds-form" novalidate>
+                            <fieldset class="signer-fieldset">
+                                <legend>Signer 1 — Embedded (signs on this page)</legend>
+                                <div class="form-group">
+                                    <label for="signer1-name">Full Name</label>
+                                    <input type="text" id="signer1-name" placeholder="Jane Smith" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signer1-email">Email Address</label>
+                                    <input type="email" id="signer1-email" placeholder="jane@example.com" required>
+                                </div>
+                            </fieldset>
+                            <fieldset class="signer-fieldset">
+                                <legend>Signer 2 — Remote (receives email link)</legend>
+                                <div class="form-group">
+                                    <label for="signer2-name">Full Name</label>
+                                    <input type="text" id="signer2-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signer2-email">Email Address</label>
+                                    <input type="email" id="signer2-email" placeholder="john@example.com" required>
+                                </div>
+                            </fieldset>
+                            <p id="form-error" class="form-error" aria-live="polite"></p>
+                            <button type="submit" class="btn btn-primary" id="start-btn">
+                                Start Signing
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Step 2: loading indicator -->
+                <div id="signing-loading" class="signing-loading hidden">
+                    <div class="spinner"></div>
+                    <p>Preparing your document&hellip;</p>
+                </div>
+
+                <!-- Step 3: DocuSign embedded iframe -->
+                <div id="signing-frame-container" class="hidden">
+                    <iframe
+                        id="ds-frame"
+                        title="DocuSign Signing Session"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <!-- Step 4: post-signing confirmation -->
+                <div id="signing-done" class="signing-done hidden">
+                    <div class="done-icon">&#10003;</div>
+                    <h3 id="done-title">Document Signed Successfully</h3>
+                    <p id="done-message">Thank you! Your signed agreement has been sent to your email address.</p>
+                    <button type="button" class="btn btn-primary" id="restart-btn">Sign Another Document</button>
+                </div>
+            </div>
+        </section>
+        <section class="sustainability">
+            <div class="container">
+                <h2>A leader in the global shift toward a better world</h2>
+                <p>Maintaining sustainable business and a sustainable planet is a responsibility we take very seriously.</p>
+                <a href="#" class="btn">See Our Commitment</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SMBC Group. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Notice</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/docusign-demo.js"></script>
+</body>
+</html>
