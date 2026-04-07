@@ -86,6 +86,7 @@ async function createSigningSession(
   const envelopeDefinition = {
     emailSubject: 'Please sign — SMBC Group Americas Demo',
     templateId: process.env.DS_TEMPLATE_ID,
+    brandId: process.env.DS_BRAND_ID,
     templateRoles: [
       {
         // Embedded signer — clientUserId required for recipient view URL
