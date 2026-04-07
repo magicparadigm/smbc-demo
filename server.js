@@ -141,6 +141,7 @@ app.post('/api/create-signing-session', async (req, res) => {
     return res.status(400).json({ error: 'signer1Email, signer1Name, signer2Email, and signer2Name are required' });
   }
 
+  console.log('DS_BRAND_ID:', process.env.DS_BRAND_ID);
   const origin = req.headers.origin || `http://localhost:${process.env.PORT || 3000}`;
   const returnUrl = `${origin}/signing-complete.html`;
 
