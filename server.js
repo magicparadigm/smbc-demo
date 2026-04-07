@@ -122,6 +122,7 @@ async function createSigningSession(
         email:        signer1Email,
         userName:     signer1Name,
         clientUserId: SIGNER_CLIENT_ID,
+        brandId:      process.env.DS_BRAND_ID,
       },
     }
   );
